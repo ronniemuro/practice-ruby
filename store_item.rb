@@ -50,9 +50,9 @@ product_1 = Products.new("red", 0.99, "cherry lollipop", true)
 product_2 = Products.new("yellow", 1.99, "banana", true)
 product_3 = Products.new("green", 1.49, "pear", true)
 
-p product_1.print_info
-p product_2.print_info
-p product_3.print_info
+product_1.print_info
+product_2.print_info
+product_3.print_info
 p product_3.description
 p product_1.price
 p product_1.stock
