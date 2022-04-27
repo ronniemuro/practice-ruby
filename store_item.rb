@@ -10,6 +10,9 @@ puts "The #{product_3[:description]} is currently at #{product_3[:price]}."
 # Class
 
 class Products
+  attr_reader :color, :price, :description, :stock
+  attr_writer :price, :stock
+
   def initialize(input_color, input_price, input_description, input_stock)
     @color = input_color
     @price = input_price
@@ -21,29 +24,29 @@ class Products
     puts "The #{description} is currently at #{price}"
   end
 
-  def color
-    @color
-  end
+  # def color
+  #   @color
+  # end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
-  def description
-    @description
-  end
+  # def description
+  #   @description
+  # end
 
-  def stock
-    @stock
-  end
+  # def stock
+  #   @stock
+  # end
 
-  def price=(input_price)
-    @price = input_price
-  end
+  # def price=(input_price)
+  #   @price = input_price
+  # end
 
-  def stock=(input_stock)
-    @stock = input_stock
-  end
+  # def stock=(input_stock)
+  #   @stock = input_stock
+  # end
 end
 
 product_1 = Products.new("red", 0.99, "cherry lollipop", true)
