@@ -13,45 +13,21 @@ class Products
   attr_reader :color, :price, :description, :stock
   attr_writer :price, :stock
 
-  def initialize(input_color, input_price, input_description, input_stock)
-    @color = input_color
-    @price = input_price
-    @description = input_description
-    @stock = input_stock
+  def initialize(input_options)
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @description = input_options[:description]
+    @stock = input_options[:stock]
   end
 
   def print_info
     puts "The #{description} is currently at #{price}"
   end
-
-  # def color
-  #   @color
-  # end
-
-  # def price
-  #   @price
-  # end
-
-  # def description
-  #   @description
-  # end
-
-  # def stock
-  #   @stock
-  # end
-
-  # def price=(input_price)
-  #   @price = input_price
-  # end
-
-  # def stock=(input_stock)
-  #   @stock = input_stock
-  # end
 end
 
-product_1 = Products.new("red", 0.99, "cherry lollipop", true)
-product_2 = Products.new("yellow", 1.99, "banana", true)
-product_3 = Products.new("green", 1.49, "pear", true)
+product_1 = Products.new({ color: "red", price: 0.99, description: "cherry lollipop", stock: true })
+product_2 = Products.new({ color: "yellow", price: 1.99, description: "banana", stock: true })
+product_3 = Products.new({ color: "green", price: 1.49, description: "pear", stock: true })
 
 product_1.print_info
 product_2.print_info
