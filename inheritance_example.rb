@@ -48,6 +48,8 @@ bike = Bike.new({ color: "red", weight: "25lbs" })
 bike.ring_bell
 p car
 p bike
+p car.make
+p bike.weight
 
 p car.accelerate
 car.accelerate
